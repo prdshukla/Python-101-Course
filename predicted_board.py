@@ -5,7 +5,7 @@ import tensorflow as tf
 from kaggle_environments import make
 from kaggle_environments import evaluate, make, utils
 import os
-Loading environment lux_ai_s2 failed: No module named 'vec_noise'
+#Loading environment lux_ai_s2 failed: No module named 'vec_noise'
 
 class ReplayBuffer():
     def __init__(self, capacity):
@@ -288,7 +288,7 @@ try:
 except Exception as e:
     agent = MLAgent(epsilon = 0.1, epsilon_decay = 0.99, min_epsilon = 0.02)
     print(e)
-Unsuccessful TensorSliceReader constructor: Failed to find any matching files for training_5/checkpoint.ckpt
+#Unsuccessful TensorSliceReader constructor: Failed to find any matching files for training_5/checkpoint.ckpt
 #agent.train(episodes = 100000, visualize = False)
 #print("My Agent vs Random Agent:", mean_reward(evaluate("connectx", ["random", test_agent], num_episodes=100)))
 '''env.reset()
@@ -477,4 +477,3 @@ def write_agent_to_file(function, file):
         print(function, "written to", file)
 
 write_agent_to_file(return_agent, "submission.py")
-<function return_agent at 0x7f7cb46f4170> written to submission.py
