@@ -12,3 +12,11 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dropout(0.5),
     tf.keras.layers.Dense(10, activation='softmax')
 ])
+
+
+history = model.fit(xtrain, ytrain,
+          epochs=20,
+          validation_data=(xtest, ytest),
+          batch_size=64,
+          callbacks=[tf.keras.callbacks.EarlyStopping(patience=5, monitor='val_loss')]
+         )
